@@ -1,3 +1,22 @@
 spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/paymentdb
+    username: postgres
+    password: Y@shwanth9724
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  flyway:
+    enabled: false
+
   application:
     name: microservices
+
+server:
+  port: 8080
