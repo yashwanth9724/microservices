@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/paymentdb
+    url: jdbc:postgresql://host.docker.internal:5432/paymentdb
     username: postgres
     password: Y@shwanth9724
 
@@ -24,3 +24,5 @@ server:
 app:
   jwt:
     secret: "this-is-a-very-long-super-secure-secret-key-which-is-more-than-32-chars"
+
+
