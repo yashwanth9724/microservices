@@ -37,7 +37,7 @@ public class PaymentService {
     @Transactional
     public PaymentResponse createPayment(String idempotencyKey,
                                          PaymentCreateRequest req) {
-        // 1?Check if payment with the same idempotency key exists
+        //Check if payment with the same idempotency key exists
         Optional<Payment> existing =
                 paymentRepository.findByIdempotencyKey(idempotencyKey);
 
