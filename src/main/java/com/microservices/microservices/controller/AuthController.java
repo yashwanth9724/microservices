@@ -31,7 +31,7 @@ public class AuthController {
                 .claim("roles", List.of("PAYMENT_WRITE", "PAYMENT_READ"))
                 .build();
 
-        // ? IMPORTANT: force HS256 so Nimbus selects the right key
+        //force HS256 so Nimbus selects the right key
         JwsHeader headers = JwsHeader.with(MacAlgorithm.HS256).build();
 
         String token = jwtEncoder.encode(JwtEncoderParameters.from(headers, claims)).getTokenValue();

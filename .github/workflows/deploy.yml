@@ -20,20 +20,20 @@ jobs:
           java-version: 21
 
       # ------------------------
-      # 1?? Unit Tests
+      #  Unit Tests
       # ------------------------
       - name: Run Unit Tests
         run: ./gradlew test
 
       # ------------------------
-      # 2?? Integration Tests
+      #  Integration Tests
       # ------------------------
       - name: Run Integration Tests
         run: ./gradlew integrationTest
         continue-on-error: false
 
       # ------------------------
-      # 3?? SonarQube Scan
+      #  SonarQube Scan
       # ------------------------
       - name: SonarQube Scan
         uses: sonarsource/sonarqube-scan-action@v2
@@ -46,7 +46,7 @@ jobs:
             -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }}
 
       # ------------------------
-      # 4?? Veracode Security Scan
+      #  Veracode Security Scan
       # ------------------------
       - name: Veracode Scan
         uses: veracode/veracode-uploadandscan-action@v1
